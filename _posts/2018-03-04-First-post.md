@@ -1,8 +1,6 @@
 ---
+title: First Post
 ---
-First Post
-==========
-
 Now is the time for all good hackers to come to the aid of their readers.
 
 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
