@@ -24,7 +24,7 @@ github_username:  magisterquis
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-sitemap
