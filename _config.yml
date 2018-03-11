@@ -13,21 +13,57 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Mrs Quis Will Think of a Better Title
+title: "Mrs Quis Will Think of a Better Title"
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
         In which I describe neat things and pontificate about unix security.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://magisterquis.github.io"
 twitter_username: magisterquis
 github_username:  magisterquis
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+paginate: 5
+paginate_path: "/page:num/"
+locale: "en-US"
+name: "Stuart"
+repository: "magisterquis/magisterquis.github.io"
+search: true
+timezone: "America/New_York"
+
+author:
+  name: Stuart
+  bio: >-
+        Professional Red Teamer.  Less-professional security researcher.
+  location: DCish
+  twitter: magisterquis
+  github: magisterquis
+  #  steam: magisterquis
+
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author_profile: true
+      share: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      read_time: true
+
+
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-remote-theme
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
