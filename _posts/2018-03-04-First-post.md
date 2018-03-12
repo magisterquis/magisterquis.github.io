@@ -1,9 +1,4 @@
 ---
-title: First Post
-layout: single
-author_profile: true
-read_time: true
-share: true
 ---
 Now is the time for all good hackers to come to the aid of their readers.
 
