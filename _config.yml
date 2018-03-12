@@ -21,6 +21,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://magisterquis.github.io"
 twitter_username: magisterquis
 github_username:  magisterquis
+show_drafts: false
 
 # Build settings
 markdown: kramdown
@@ -56,6 +57,9 @@ defaults:
       type: posts
     values:
       read_time: true
+      toc: true
+      toc_label: contents
+      layout: single
 
 
 
