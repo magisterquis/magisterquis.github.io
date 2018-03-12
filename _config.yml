@@ -22,6 +22,8 @@ url: "https://magisterquis.github.io"
 twitter_username: magisterquis
 github_username:  magisterquis
 show_drafts: false
+twitter:
+  username: "magisterquis"
 
 # Build settings
 markdown: kramdown
