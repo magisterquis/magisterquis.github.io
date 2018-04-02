@@ -24,7 +24,8 @@ This handy little system call is something like
 of returning a pointer to a chunk of memory, it returns a file descriptor which
 refers to an anonymous (i.e. memory-only) file.  This is only visible in the
 filesystem as a symlink in `/proc/<PID>/fd/` (e.g. `/proc/10766/fd/3`), which,
-as it turns out, `execve(2)` will happily use to execute an ELF binary.
+as it turns out, [`execve(2)` will happily use to execute an ELF
+binary](https://0x00sec.org/t/super-stealthy-droppers/3715).
 
 The [manpage](http://man7.org/linux/man-pages/man2/memfd_create.2.html)
 has the following to say on the subject of naming anonymous files:
@@ -319,3 +320,8 @@ In C (translate to your non-disk-touching language of choice):
 1. `fd = memfd_create("", MFD_CLOEXEC);`
 2. `write(pid, elfbuffer, elfbuffer_len);`
 3. `asprintf(p, "/proc/self/fd/%i", fd); execl(p, "kittens", "arg1", "arg2", NULL);`
+
+----
+_Updated 20170402 to link to
+https://0x00sec.org/t/super-stealthy-droppers/3715, from where I got
+`execve("/proc/<PID>/fd/<FD>...`_
