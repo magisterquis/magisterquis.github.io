@@ -318,7 +318,7 @@ TL;DR
 -----
 In C (translate to your non-disk-touching language of choice):
 1. `fd = memfd_create("", MFD_CLOEXEC);`
-2. `write(pid, elfbuffer, elfbuffer_len);`
+2. `write(fd, elfbuffer, elfbuffer_len);`
 3. `asprintf(p, "/proc/self/fd/%i", fd); execl(p, "kittens", "arg1", "arg2", NULL);`
 
 ----
