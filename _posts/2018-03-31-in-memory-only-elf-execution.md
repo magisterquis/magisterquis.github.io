@@ -197,7 +197,7 @@ exit (say, run it multiple times), it's the way to go.  In general, using
 ```perl
 while ($keep_going) {
         my $pid = fork();
-        if (-1 == $pid) { # Error
+        if (not defined $pid) { # Error
                 die "fork: $!";
         }
         if (0 == $pid) { # Child
@@ -214,7 +214,7 @@ terminate:
 ```perl
 # Spawn child
 my $pid = fork();
-if (-1 == $pid) { # Error
+if (not defined $pid) { # Error
         die "fork1: $!";
 }
 if (0 != $pid) { # Parent terminates
@@ -227,7 +227,7 @@ if (-1 == syscall(112)) {
 
 # Spawn grandchild
 $pid = fork();
-if (-1 == $pid) { # Error
+if (not defined $pid) { # Error
         die "fork2: $!";
 }
 if (0 != $pid) { # Child terminates
